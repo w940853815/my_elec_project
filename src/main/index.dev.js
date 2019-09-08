@@ -10,6 +10,10 @@
 // Install `electron-debug` with `devtron`
 require('electron-debug')({ showDevTools: true })
 
+// // Run the following from the Console tab of your app's DevTools
+// require('devtron').install()
+// // You should now see a Devtron tab added to the DevTools
+
 // Install `vue-devtools`
 require('electron').app.on('ready', () => {
   let installExtension = require('electron-devtools-installer')
