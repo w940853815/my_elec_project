@@ -1,6 +1,8 @@
 'use strict'
 
 import { app, BrowserWindow, Tray } from 'electron'
+// build后可打开调试工具
+// require('electron-debug')({ showDevTools: true })
 
 /**
  * Set `__static` path to static files in production
@@ -30,6 +32,8 @@ function createWindow () {
   })
 
   mainWindow.loadURL(winURL)
+  // build后可打开调试工具
+  // mainWindow.openDevTools()
 
   mainWindow.on('closed', () => {
     mainWindow = null
